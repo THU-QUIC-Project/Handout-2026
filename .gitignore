@@ -1,7 +1,6 @@
-site/
 .cache
 .venv
 .env
-
+site/
 # Local Netlify folder
 .netlify
