@@ -26,7 +26,14 @@ but you will refer to mini RFCs frequently during coding.
 
     We provide the starter code in both `C++` and `Rust` languages this year. There is no promise that they are synchronized. Feel free to use either language, or any other language you prefer that can be compiled into an executable.
 
+## Important Dates
 
+- Thu, May 14th, 2026:  Meeting with TA with 10% bonus
+- Thu, May 21st, 2026:  Meeting with TA 
+- Thu, May 28th, 2026:  Meeting with TA 
+- Thu, June 4th, 2026:  Meeting with TA with -20% penalty
+- Thu, June 11th, 2026:  Meeting with TA with -40% penalty 
+- Sun, June 14th, 2026:  Deadline for Reports
 
 ## Grading
 This lab is worth 90% of your course grade. The grade of this project is given according to both the
