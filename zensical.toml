@@ -300,6 +300,11 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/THU-QUIC-Project/Handout-2026"
+
+
+# [project.markdown_extensions.attr_list]
+# [project.markdown_extensions.md_in_html]
+# [project.markdown_extensions.pymdownx.blocks.caption]

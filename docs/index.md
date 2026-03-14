@@ -1,166 +1,57 @@
 ---
-icon: lucide/rocket
+icon: lucide/graduation-cap
 ---
 
-# Get started
+# The THQUIC Project (2026 Spring)
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+!!! warning
+    There are many changes to this project since 2026 Spring semester, 
+    including turning the handouts into online version, the adoption of the Rust framework and new grading scripts.
+    This handout, including grading policies, and the testcases in the github repo may be updated during the semester.
 
-## Commands
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+## Overview
+In this project, you will implement the QUIC transport protocol almost from scratch. This project
+will be done in teams of **at most three** students. 
+All teams are required to implement certain ”base” features and several ”advanced” features selected from a given list. 
+You need to implement all ”base” features to get **60** points and implement enough ”advanced” features, to obtain the remaining **40** points. Each ”advanced” feature is assigned a score according to its difficulty.
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+You need to complete several labs (3 + X, depending on your choices of features) to finish this
+project. In each lab, you implement a piece of QUIC (e.g., reliable transmission, flow control) and
+finally get a rather complicated transmission protocol. We prepare 3 labs (lab I-1 to lab I-3) for all ”base” features and one lab (lab II-x) for each ”advanced” feature. You can read the handout of each lab to learn more details, including its background, target, and requirement. We also give some
+suggestions in handouts.
 
-## Examples
+You have to read RFCs – the standard of the Internet – to understand QUIC before implementing
+it. RFC is long and, honestly, verbose, especially for beginners. We prepare some mini RFC, a
+simplified and re-organized version of the original RFCs, to help you understand QUIC more easily.
+We prepare one mini RFC for each lab. You could skim the mini RFC before reading the handout
+but you will refer to mini RFCs frequently during coding.
 
-### Admonitions
-
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
 
 !!! note
 
-    This is a **note** admonition. Use it to provide helpful information.
+    We provide the starter code in both `C++` and `Rust` languages this year. There is no promise that they are synchronized. Feel free to use either language, or any other language you prefer that can be compiled into an executable.
 
-!!! warning
+## Important Dates
 
-    This is a **warning** admonition. Be careful!
+- Thu, May 14th, 2026:  Meeting with TA with 10% bonus
+- Thu, May 21st, 2026:  Meeting with TA 
+- Thu, May 28th, 2026:  Meeting with TA 
+- Thu, June 4th, 2026:  Meeting with TA with -20% penalty
+- Thu, June 11th, 2026:  Meeting with TA with -40% penalty 
+- Sun, June 14th, 2026:  Deadline for Reports
 
-### Details
+## Grading
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
-
-??? info "Click to expand for more info"
-    
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
-
-## Code Blocks
-
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
-
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
-
-greet("Python")
-```
-
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
-
-    Code annotations allow to attach notes to lines of code.
-
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
-
-## Content tabs
-
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
-
-=== "Python"
-
-    ``` python
-    print("Hello from Python!")
-    ```
-
-=== "Rust"
-
-    ``` rs
-    println!("Hello from Rust!");
-    ```
-
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
+See [Grading Policy](./Grading) for details.
 
 
-## Formatting
+## How to Start
 
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
+1. Find other students to organize your team if you wish.
 
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
+2. Submit the homework in Web Learning with your name, GitHub account, and the names of your
+team members (Everyone in the team should submit it).
 
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" async src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+3. You will be invited into a GitHub organization called [THU-QUIC-Project](https://github.com/THU-QUIC-Project). We host all materials:
+handouts (the source code for this website), mini RFCs, and starter code in repositories of the organization because they are updated frequently. You could ask questions, submit bug reports, and start discussions by opening issues on certain repositories.
