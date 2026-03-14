@@ -74,7 +74,7 @@ Notice that some labs do not have documents and/or testcases. Please reach out t
 - LabII-81 Error Handling (mini-RFC 81, **10pts**)
 
 #### Security
-- LabII-91 QUIC Handshake (mini-RFC 91, **15pts**)
+- [LabII-91](./labs/LabII-91) QUIC Handshake (mini-RFC 91, **15pts**)
 - LabII-92 Packet Protection (mini-RFC 92, **10pts**)
 - LabII-93 0-RTT Transmission (mini-RFC 93, **5pts**)
 
