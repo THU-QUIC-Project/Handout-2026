@@ -18,7 +18,7 @@ Study `src/client.cc` and `src/server.cc` if you are not familiar with such styl
 Our framework could be simplified to a big loop as shown below, in which the framework constantly reads data from a UDP socket, feeds data to the application by calling a callback function
 registered by the application, and moves data sent by the application to the network.
 
-``` c++ hl_lines="2" title="The Single-Thread Event Loop Model"
+``` c++ title="The Single-Thread Event Loop Model"
 
 void SocketLoop {
     for(;;) {
@@ -48,7 +48,7 @@ helper functions.
 You may need to implement the following API in your implementation:
 
 
-``` c++ hl_lines="2" title="The APIs to implement"
+``` c++ title="The APIs to implement"
 /*
 * Invoke when the client or server completes handshake and the connection is ready.
 * @param connection_descriptor: a 64 bit descriptor of the established connection
@@ -236,7 +236,7 @@ See `src/bin/client.rs` and `src/bin/server.rs` for examples.
 
 ### Utilities
 
-The `proto` mod contains types and functions for encoding and decoding QUIC frames and packets.
+The `mzquic-proto` crate (located at `proto`) contains types and functions for encoding and decoding QUIC frames and packets.
 
 The `core/src/connection/timer.rs` provide a timer implementation that can wait for a set of timers simultaneously and wait for the first one to expire.
 
