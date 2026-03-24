@@ -19,7 +19,7 @@ in this section, 100 pts is considered as the "full score" for correctness, corr
 
 ### Basic Features (60 pts) 
 
-You should refer to mini-RFC 01, 02 and 03 to pass the following labs, for 20pts each.
+You should refer to mini-RFC 01, 02 and 03 to pass the following labs for 60 pts in total.
 
 - [LabI-1](./labs/LabI-1) The QUIC Transporting Protocol
 - [LabI-2](./labs/LabI-2) Reliable Transmission

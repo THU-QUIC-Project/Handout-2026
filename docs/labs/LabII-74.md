@@ -23,7 +23,7 @@ We will use total bytes sent by the sender ($x$) to finish the transmission as a
 The detailed grading formula is as follows (where $1$ is the full credit of this lab):
 
 $$
-\text{Score} \ge  \min \left(2 - \dfrac{0.9 x}{\text {FILE_SIZE}},  1\right)
+\text{Score} \ge  \min \left(3 - \dfrac{0.9 x}{\text {FILE_SIZE}},  1\right)
 $$
 
 The $\ge$ in the formula means that the future amending of this page will only relax the score requirement, not tighten it. Talk to TA if you think the parameters need to be adjusted.
