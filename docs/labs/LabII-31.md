@@ -31,7 +31,7 @@ To show that `NEW_CONNECTION_ID` and `RETIRE_CONNECTION_ID` frames are generated
 
 ## Related Testcase
 
-70% of the credits are based on the following black-box test:
-We will run the pingpong program with an environment variable `TEST_CONNECTION_ID` set. The program should complete and exit gracefully. Packet traces are checked to see whether all packets contain valid connection IDs and whether `NEW_CONNECTION_ID` and `RETIRE_CONNECTION_ID` frames are sent by the client and correctly handled by the server.
+We will run the pingpong program with an environment variable `TEST_CONNECTION_ID` set. The program should complete and exit gracefully. Packet traces are checked to see whether all packets contain valid connection IDs and whether `NEW_CONNECTION_ID` and `RETIRE_CONNECTION_ID` frames are sent by the client and correctly handled by the server. Notice that the automated test for this only checks whether these
+frames exists. The interaction logic of these will be inspected manually during the meeting with TA from the `.pcap` file.
 
-To get full credit of this feature, you should explain how your Connection IDs are generated during the meeting with the TA and show that they are securely and randomly generated.
+Besides, to get full credit of this feature, you should explain how your Connection IDs are generated during the meeting with the TA and show that they are securely and randomly generated.

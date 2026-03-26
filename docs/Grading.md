@@ -19,7 +19,7 @@ in this section, 100 pts is considered as the "full score" for correctness, corr
 
 ### Basic Features (60 pts) 
 
-You should refer to mini-RFC 01, 02 and 03 to pass the following labs, for 20pts each.
+You should refer to mini-RFC 01, 02 and 03 to pass the following labs for 60 pts in total.
 
 - [LabI-1](./labs/LabI-1) The QUIC Transporting Protocol
 - [LabI-2](./labs/LabI-2) Reliable Transmission
@@ -97,19 +97,26 @@ They should be able to handle all the following CLI arguments:
 
 ```bash
 # Run file transfer server and client:
-./server --file-lock ./xxx.lock   0.0.0.0:7722 file-transfer --path ./original.bin
-./client --file-lock ./xxx.lock 127.0.0.1:7722 file-transfer --path ./output.bin
+./server --file-lock ./xxx.lock   0.0.0.0:8080 file-transfer --path ./original.bin
+./client --file-lock ./xxx.lock 127.0.0.1:8080 file-transfer --path ./output.bin
 
 # Run ping pong server and client:
-./server --file-lock ./xxx.lock   0.0.0.0:7722 ping-pong
-./client --file-lock ./xxx.lock 127.0.0.1:7722 ping-pong
+./server --file-lock ./xxx.lock   0.0.0.0:8080 ping-pong
+./client --file-lock ./xxx.lock 127.0.0.1:8080 ping-pong
 
-# Run stream echo server and client:
-./server --file-lock ./xxx.lock   0.0.0.0:7722 stream-echo
-./client --file-lock ./xxx.lock 127.0.0.1:7722 stream-echo
+# Run ping pong stop server and client: (For Lab II-41: Advanced Stream Operations)
+./server --file-lock ./xxx.lock   0.0.0.0:8080 ping-pong-stop
+./client --file-lock ./xxx.lock 127.0.0.1:8080 ping-pong-stop
 ```
 
-!!! warning
+There do exist some extra applications, (e.g. `stream-echo`) in the skeleton code, yet they are informational only and you are free
+to remove the support for it. 
 
-    To be Finished
+
+The test will be run on a Debian 13 (Trixie) machine, with a 6.12 kernel
+```
+Linux lethe-4 6.12.74+deb13+1-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.74-2 (2026-03-08) x86_64 GNU/Linux
+```
+
+And we will use [this grader program](https://github.com/THU-QUIC-Project/rusty_grader) to test your code.
 
